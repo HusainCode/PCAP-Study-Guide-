@@ -2,7 +2,7 @@
 
 # PCAP-31-03 Exam Preparation
 
-This repository contains my study notes and the code I wrote to prepare for and pass the **PCAP™ – Certified Associate in Python Programming** (Exam PCAP-31-03). It contains notes and code.
+This repository contains my study notes and the code I wrote to prepare for and pass the **PCAP™ – Certified Associate in Python Programming** (Exam PCAP-31-03).
 
 ## Exam Overview
 
