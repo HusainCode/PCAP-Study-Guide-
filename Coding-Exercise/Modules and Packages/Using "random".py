@@ -20,6 +20,68 @@
 
 # Note: You can assume that the arguments of the function are always correct (i.e. you always get two correct integers as the input arguments).
 
+################################ Standard Solution ################################
+
+import random
 
 def generate_tickets(ticket_count, max_number):
-    pass
+    
+    # Generate random and unique numbers
+    tickets = random.sample(range(max_number), ticket_count)
+    winner = random.choice (tickets) # Select a unique number 
+    
+    return tickets, winner
+    
+print(generate_tickets(5,10))
+
+
+################################ Improved Solution ################################
+
+import random
+
+class Lottery:
+    TICKET_COUNT = 5
+    MAX_NUMBER = 10
+    MIN_NUMBER = 1
+    SUB_CODE = 1
+
+    def __init__(self):
+        self.__generate_tickets()
+        self.__generate_winning_number()
+
+    def __generate_tickets(self):
+      # Generate random and unique numbers
+      self.tickets = random.sample(range(self.MIN_NUMBER, self.MAX_NUMBER + 1), self.TICKET_COUNT)
+
+      return self.tickets
+
+    def __generate_winning_number(self):
+        self.winner = random.choice(self.tickets)  # Select a unique number
+        return self.winner
+
+
+    def __cheat(self):
+            cheated_winner = self.SUB_CODE - self.winner
+            return cheated_winner
+
+    def play(self):
+        user_pay = float(input("Pay your fee to play:"))
+
+        print(f"Available tickets: {self.tickets}")
+        user_choice = int(input("Please choice a number from the available tickets:"))
+
+        if user_choice == self.winner:
+            print(f"The winning number is {self.__cheat()}")
+            print(f"Sorry you lost, thank you for your ${user_pay}! 😂")
+        else:
+            print(f"The winning number is {self.__generate_winning_number()}")
+            print(f"Sorry you lost, thank you for your ${user_pay}! 😂")
+
+
+if __name__ == "__main__":
+    print("Welcome to the you ain't winning lottery!")
+    print("If you win, which you never will, you will win a million dollars\n")
+
+    lottery = Lottery()
+    lottery.play()
+
