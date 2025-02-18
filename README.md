@@ -1,8 +1,5 @@
 ![Project Status](https://img.shields.io/badge/status-in_progress-yellow)
 
-# PCAP-Study-Guide-
- Certified Associate Python Programmer (PCAP) certification
-
 # PCAP-31-03 Exam Preparation
 
 This repository contains my study notes and the code I wrote to prepare for and pass the **PCAP™ – Certified Associate in Python Programming** (Exam PCAP-31-03). It contains notes and code.
