@@ -28,8 +28,6 @@ stroy =  "Alice was thrilled. The course was taught by a well-known programmer w
 interesting and easy to understand. The course covered everything a beginner programmer needed, 
 and Alice was finally able to understand how to code in Python."
 
-
-
 def get_longest_word(s):
     words = re.findall(r"\b[\w']+\b", s) 
     return max(words, key=len)
