@@ -20,3 +20,7 @@
 # Alice was thrilled. The course was taught by a well-known programmer who made the lessons interesting and easy to understand.
 # The course covered everything a beginner programmer needed, and Alice was finally able to understand how to code in Python.'''
 ############################### End Of Story ###############################
+
+
+def get_longest_word(s):
+    pass
