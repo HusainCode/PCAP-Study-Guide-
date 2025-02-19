@@ -22,5 +22,16 @@
 ############################### End Of Story ###############################
 
 
+import re
+
+stroy =  "Alice was thrilled. The course was taught by a well-known programmer who made the lessons
+interesting and easy to understand. The course covered everything a beginner programmer needed, 
+and Alice was finally able to understand how to code in Python."
+
+
+
 def get_longest_word(s):
-    pass
+    words = re.findall(r"\b[\w']+\b", s) 
+    return max(words, key=len)
+
+print(get_longest_word(stroy))
