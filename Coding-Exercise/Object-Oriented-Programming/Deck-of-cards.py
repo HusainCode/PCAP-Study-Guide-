@@ -36,7 +36,7 @@
 # * You can use the shuffle method from the random module like this: random.shuffle(list_name)
 
 
-import random  # Importing random to shuffe the deck
+import random 
 from itertools import product  # Importing itertools.product to generate card combinations
 
 # Card class represents an individual playing card
