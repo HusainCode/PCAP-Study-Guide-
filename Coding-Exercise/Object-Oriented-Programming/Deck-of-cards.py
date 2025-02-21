@@ -35,11 +35,54 @@
 # ['3 of hearts', 'Jack of spades']
 # * You can use the shuffle method from the random module like this: random.shuffle(list_name)
 
-class Deck:
-    pass
 
+import random  # Importing random to shuffe the deck
+from itertools import product  # Importing itertools.product to generate card combinations
 
-
-
+# Card class represents an individual playing card
 class Card:
-    pass
+    def __init__(self, suit, value):
+        """
+        Initializes a Card object. Example: Card("hearts", "10")
+        """
+        self.suit = suit  # Suit of the card (hearts, diamonds, clubs, spades)
+        self.value = value  # Value of the card (Ace, 2, 3, ..., King)
+
+    def present(self):
+        return f"{self.value} of {self.suit}"
+
+# Deck class represents a full deck of 52 playing cards
+class Deck:
+    def __init__(self):
+        """
+        Initializes a Deck object with a full set of 52 unique cards.
+        """
+        suits = ['hearts', 'diamonds', 'clubs', 'spades']
+        values = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King']
+
+        # Creating all 52 Card objects and storing them in the cards list
+        self.cards = [Card(suit, value) for suit, value in product(suits, values)]
+
+    def shuffle(self):
+        random.shuffle(self.cards)  # Shuffles the deck of cards randomly.
+
+    def deal(self):
+        return self.cards.pop() if self.cards else None  # Removes and returns last card or None if empty
+
+    def count_remaining(self):
+        return len(self.cards) # Returns the number of cards left in the deck.
+
+    def get_remaining(self):
+        return [card.present() for card in self.cards]  # Converts each Card object into a string
+
+
+deck = Deck()  
+deck.shuffle()  
+
+card1 = deck.deal()  
+print(card1.present() if card1 else "No more cards")  
+
+print(f"Cards left: {deck.count_remaining()}")  
+
+print(deck.get_remaining())  
+
