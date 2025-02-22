@@ -4,6 +4,15 @@
 
 This repository contains my study notes and the code I wrote to prepare for and pass the **PCAP™ – Certified Associate in Python Programming** (Exam PCAP-31-03).
 
+To pass this certification, I studied from the following **Udemy course**:  
+[Python PCAP Certification Course](https://eagleeye.udemy.com/course/python-pcap/learn/lecture/33982160?start=1#overview).  
+
+The exercises and projects in this repository are mostly (if not entirely) based on the course material.  
+Each project includes:  
+- **UML design**  
+- **PDF requirements** from the instructor
+- **Code**
+
 ## Exam Overview
 
 The **PCAP-31-03** exam tests proficiency in Python programming, focusing on designing multi-module applications, object-oriented programming (OOP), and advanced operations with modules, packages, and exceptions.
