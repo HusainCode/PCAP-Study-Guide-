@@ -1,0 +1,9 @@
+from abc import ABC, abstractmethod
+
+
+class Player(ABC):
+    score = 0  # start as zero for both players
+
+    @abstractmethod
+    def make_choice(self):  # must be implemented at the child level
+        pass
